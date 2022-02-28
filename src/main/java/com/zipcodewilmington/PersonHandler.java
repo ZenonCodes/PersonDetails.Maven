@@ -35,35 +35,49 @@ public class PersonHandler {
 
 
     public String forLoop() {
-        String result = "";
+        int pArrayLen = personArray.length;
+        StringBuilder result = new StringBuilder(pArrayLen);
         // identify initial value
         // identify terminal condition
         // identify increment
 
+
         // use the above clauses to declare for-loop signature
             // begin loop
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
 
-        return result;
+        for (int counter = 0; counter < pArrayLen; counter++) {
+            // use `counter` to identify the `current Person` in the array
+            Person currentPerson = personArray[counter];
+            // get `string Representation` of `currentPerson`
+            currentPerson.toString();
+            // append `stringRepresentation` to `result` variable
+            result.append(currentPerson);
+            // end loop
+        }
+        return result.toString();
     }
 
 
 
     public String forEachLoop() {
-        String result = "";
+        StringBuilder result = new StringBuilder(personArray.length);
+        String pString = "";
+
         // identify array's type
         // identify array's variable-name
+        Person [] personList = personArray;
+
 
         // use the above discoveries to declare for-each-loop signature
+        for (Person currentPerson : personList) {
             // begin loop
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
+            // get `string Representation` of `currentPerson`
+            pString = currentPerson.toString();
+            // append `stringRepresentation` to `result` variable
+            result.append(pString);
             // end loop
-
-        return result;
+        }
+        return result.toString();
     }
 
 
